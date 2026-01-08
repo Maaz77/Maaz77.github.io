@@ -1,3 +1,20 @@
+// Safari CSS loading fix - ensure stylesheet loads
+(function() {
+    'use strict';
+    // Force Safari to reload CSS if it's not loading
+    if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
+        window.addEventListener('load', function() {
+            const links = document.querySelectorAll('link[rel="stylesheet"]');
+            links.forEach(function(link) {
+                if (link.href && link.href.indexOf('style.css') !== -1) {
+                    const href = link.href.split('?')[0];
+                    link.href = href + '?v=' + Date.now();
+                }
+            });
+        });
+    }
+})();
+
 // Smooth scroll behavior for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
