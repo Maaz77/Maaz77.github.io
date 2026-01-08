@@ -3,26 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Blog - Random Biography</title>
+    <title>Amin Abbaszadeh - Data Scientist</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>My Personal Blog</h1>
-    </header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Amin Abbaszadeh</div>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <main>
-        <section class="biography">
-            <h2>Biography</h2>
-            <p id="bio-content">
-                Click the button below to load a random biography.
-            </p>
-            <button id="load-bio">Load Random Biography</button>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="profile-image-wrapper">
+                    <img src="IMG_2346.jpeg" alt="Amin Abbaszadeh" class="profile-image">
+                </div>
+                <h1 class="hero-name">Amin Abbaszadeh</h1>
+                <p class="hero-title">Data Scientist</p>
+                <p class="hero-location">Milan, Italy • Open to Relocation</p>
+                <div class="hero-buttons">
+                    <a href="mailto:abbaszadehmohammadamin@yahoo.com" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary">View Projects</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Maaz77/" target="_blank" class="social-link">GitHub</a>
+                    <a href="https://linkedin.com/in/amin8abbaszadeh/" target="_blank" class="social-link">LinkedIn</a>
+                    <a href="mailto:abbaszadehmohammadamin@yahoo.com" class="social-link">Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 My Personal Blog</p>
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">Introduction</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    I obtained my M.Sc. degree in Computer Science and Engineering, specializing in Artificial Intelligence at the Politecnico di Milano. During my academic studies and industrial internships, I have gained experience in Python, C/C++, and Java, applied to Edge AI, Generative AI, RAG Applications, LLMs, Machine Learning, Deep Learning, and Software Development fields. I am experienced in working with diverse data types, including Tabular, Image, Text, Time Series, and Audio.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI Engineer Intern</h3>
+                            <span class="timeline-company">STMicroelectronics R&D</span>
+                            <span class="timeline-date">Dec 2024 - Dec 2025</span>
+                        </div>
+                        <p class="timeline-location">Milan, Italy</p>
+                        <ul class="timeline-details">
+                            <li>Designed and developed a real-time Computer Vision pipeline for Face Detection, and 3D Head Pose Estimation on edge devices.</li>
+                            <li>Achieved a 75% model size reduction by mastering Model Quantization (FP32 to INT8) for STM32N6 NPU deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>AI Research Assistant</h3>
+                            <span class="timeline-company">AIRLab (Politecnico di Milano) - Pirelli</span>
+                            <span class="timeline-date">Sep 2024 - Dec 2024</span>
+                        </div>
+                        <p class="timeline-location">Milan, Italy</p>
+                        <ul class="timeline-details">
+                            <li>Worked with AIRLab and Pirelli teams to clean, organize, and label a private industrial image dataset for anomaly detection.</li>
+                            <li>Built and deployed a baseline anomaly detection pipeline using Anomalib Framework on Dockerized private-cloud GPUs.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Machine Vision Intern</h3>
+                            <span class="timeline-company">Deed Asia Development Group Ltd</span>
+                            <span class="timeline-date">Summer 2019</span>
+                        </div>
+                        <p class="timeline-location">Shiraz, Iran</p>
+                        <ul class="timeline-details">
+                            <li>Collaborated with a team to annotate image data for object detection and OCR tasks.</li>
+                            <li>Fine-tuned a pre-trained Convolutional Neural Network model to improve license plate recognition accuracy by 15%.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python (Advanced)</span>
+                        <span class="skill-tag">C/C++</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Bash Scripting</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">AI & Computer Vision</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">OpenCV</span>
+                        <span class="skill-tag">MediaPipe</span>
+                        <span class="skill-tag">Transformers</span>
+                        <span class="skill-tag">Scikit-Learn</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">HuggingFace</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Deployment & Optimization</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Weights and Biases</span>
+                        <span class="skill-tag">TFMOT</span>
+                        <span class="skill-tag">TF-Lite</span>
+                        <span class="skill-tag">TensorRT</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Cloud Services</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Data & Web Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Neo4j</span>
+                        <span class="skill-tag">Elastic Search</span>
+                        <span class="skill-tag">Spark</span>
+                        <span class="skill-tag">Cassandra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>End-to-End MLOps Pipeline: Supply Chain Delay Prediction</h3>
+                        <a href="#" class="project-link">Repository →</a>
+                    </div>
+                    <ul class="project-details">
+                        <li>MLflow experiment tracking, Airflow orchestration, FastAPI + Streamlit serving, and Evidently + Grafana monitoring.</li>
+                        <li>Terraform-based IaC with LocalStack for AWS emulation and S3-compatible storage for data and ML artifacts.</li>
+                        <li>Docker containerization and Kubernetes deployment with ArgoCD enabling GitOps-based continuous delivery.</li>
+                        <li>CI/CD automation using GitHub Actions, Makefile-driven workflows, pytest, pre-commit, and DVC for data versioning.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Star Rating Prediction and Sentiment Analysis on YELP Dataset</h3>
+                        <span class="project-badge">Team Academic Project</span>
+                    </div>
+                    <ul class="project-details">
+                        <li>Developed a Transformer-based NLP pipeline using PyTorch, fine-tuning BERT architectures for semantic understanding.</li>
+                        <li>Implemented Explainable AI (XAI) techniques using the LIME framework to interpret model predictions.</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Short-Term Bitcoin Market Prediction</h3>
+                        <a href="#" class="project-link">Repository →</a>
+                        <span class="project-badge">Individual Academic Project</span>
+                    </div>
+                    <ul class="project-details">
+                        <li>Economic and text (Twitter) data collection and feature engineering.</li>
+                        <li>Developed different machine learning and deep learning solutions, gained 88% accuracy with LSTM model.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education-section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>M.Sc. in Computer Science and Engineering</h3>
+                        <span class="education-gpa">GPA: 100/110</span>
+                    </div>
+                    <p class="education-specialization">Artificial Intelligence</p>
+                    <p class="education-institution">Politecnico di Milano</p>
+                    <p class="education-location">Milan, Italy</p>
+                    <p class="education-period">2022 - 2025</p>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-header">
+                        <h3>B.Sc. in Computer Engineering</h3>
+                        <span class="education-gpa">GPA: 3.74/4</span>
+                    </div>
+                    <p class="education-institution">Shiraz University</p>
+                    <p class="education-location">Shiraz, Iran</p>
+                    <p class="education-period">2016 - 2021</p>
+                </div>
+            </div>
+
+            <div class="courses-section">
+                <h3 class="courses-title">Academic Courses</h3>
+                <div class="courses-grid">
+                    <div class="course-item">
+                        <span class="course-name">Machine Learning</span>
+                        <span class="course-grade">30 Cum Laude / 30</span>
+                        <span class="course-term">Spring 2024</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-name">Artificial Neural Networks and Deep Learning</span>
+                        <span class="course-grade">28/30</span>
+                        <span class="course-term">Autumn 2023</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-name">Natural Language Processing</span>
+                        <span class="course-grade">26/30</span>
+                        <span class="course-term">Spring 2024</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-name">Data Mining</span>
+                        <span class="course-grade">26/30</span>
+                        <span class="course-term">Autumn 2023</span>
+                    </div>
+                    <div class="course-item">
+                        <span class="course-name">Streaming Data Analytics</span>
+                        <span class="course-grade">27/30</span>
+                        <span class="course-term">Autumn 2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <p class="contact-text">I'm always open to discussing new opportunities, collaborations, or just having a chat about AI and technology.</p>
+                <div class="contact-info">
+                    <a href="mailto:abbaszadehmohammadamin@yahoo.com" class="contact-item">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">abbaszadehmohammadamin@yahoo.com</span>
+                    </a>
+                    <a href="tel:+393519358813" class="contact-item">
+                        <span class="contact-label">Phone</span>
+                        <span class="contact-value">+39 351 935 8813</span>
+                    </a>
+                    <a href="https://github.com/Maaz77/" target="_blank" class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">github.com/Maaz77/</span>
+                    </a>
+                    <a href="https://linkedin.com/in/amin8abbaszadeh/" target="_blank" class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <span class="contact-value">linkedin.com/in/amin8abbaszadeh/</span>
+                    </a>
+                </div>
+                <div class="languages-section">
+                    <h3 class="languages-title">Languages</h3>
+                    <div class="languages-list">
+                        <span class="language-item">English: C1 Level</span>
+                        <span class="language-item">Italian: A1 Level</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Amin Abbaszadeh. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>

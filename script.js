@@ -1,16 +1,76 @@
-document.getElementById("load-bio").addEventListener("click", function() {
-    const biographies = [
-        "John Doe is a software engineer from San Francisco. With over 10 years of experience in web development, John has worked with top tech companies and has a passion for open-source projects.",
-        "Jane Smith is a graphic designer and digital artist from New York. She has worked with various renowned brands and is known for her creative approach to visual storytelling.",
-        "Michael Johnson, a data scientist based in Austin, Texas, specializes in machine learning and AI. He has published numerous papers and is a frequent speaker at tech conferences.",
-        "Emily Davis, a travel blogger and photographer, has visited over 50 countries. Her blog captures the beauty of different cultures and landscapes around the world.",
-        "Chris Brown is a cybersecurity expert from London. With years of experience in ethical hacking and network security, Chris is dedicated to making the digital world a safer place."
-    ];
-
-    // Get a random biography
-    const randomBio = biographies[Math.floor(Math.random() * biographies.length)];
-
-    // Display the biography in the paragraph element
-    document.getElementById("bio-content").textContent = randomBio;
+// Smooth scroll behavior for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
 });
- 
+
+// Navbar background on scroll
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+    } else {
+        navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+    }
+    
+    lastScroll = currentScroll;
+});
+
+// Intersection Observer for fade-in animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all sections for animation
+document.querySelectorAll('.section > .container > *').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+
+// Add active state to navigation links based on scroll position
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-menu a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+        }
+    });
+});
