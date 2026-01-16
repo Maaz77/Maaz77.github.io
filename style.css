@@ -279,7 +279,8 @@ body {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-secondary);
-    text-align: center;
+    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
 /* Experience Section */
@@ -348,6 +349,17 @@ body {
 .timeline-company {
     color: var(--primary-color);
     font-weight: 600;
+}
+
+.timeline-company a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.timeline-company a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
 }
 
 .timeline-date {
@@ -581,8 +593,22 @@ body {
     font-size: 0.9rem;
 }
 
+.education-thesis {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-style: italic;
+}
+
 .courses-section {
-    margin-top: 3rem;
+    margin-top: 0;
+}
+
+.courses-section .section-title {
+    margin-bottom: 3rem;
 }
 
 .courses-title {
